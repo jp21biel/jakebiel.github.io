@@ -45,11 +45,59 @@
                     opacity: 1;
                 }
             }
+
+
+            .hero-box {
+                background-color: #00008b; /* Dark blue background */
+                height: 400px;
+                width: 800px;
+                border: 2px solid black;
+
+                /* ❌ Incorrect: hard-coded margin guessing to center the box - fixed */
+                
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 100px;
+            }
+
+            h2 {
+                /* ❌ Incorrect: very low contrast on dark background - fixed */
+                color: white;
+
+                /* ❌ Incorrect: print unit used for screen layout - fixed */
+                font-size: 60px;
+
+                /* ❌ Incorrect: using padding to fake centering - fixed */
+                text-align: center;
+            }
+
+            p {
+                color: lightgray;
+
+                /* ❌ Incorrect: print unit again - fixed */
+                font-size: 20px;
+
+                /* ❌ Incorrect: manual spacing instead of layout tools - fixed */
+                text-align: center;
+            }
+
+            button {
+                /* ❌ Incorrect: guessing alignment with margins - fixed */
+                padding: 10px;
+                margin-left: 45%;
+            }
+
         </style>
     </head>
     <body>
         <h1 class="fade-in-bottom">
             Jake Biel
         </h1>
+        <section class="hero-box">
+            <h2>Welcome to Our App</h2>
+            <p>The best way to manage your tasks without the stress.</p>
+            <button>Get Started</button>
+        </section>
+
     </body>
 </html>
