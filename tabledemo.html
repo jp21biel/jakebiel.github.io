@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header>
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
@@ -40,11 +40,17 @@
                 font-weight: bold;
             }
         </style>
-    </header>
+    </head>
     <body>
+        <section class="navbar">
+            <button class="navlink" onclick="location.href='index.html'">Home</button>
+            <button class="navlink" onclick="location.href='about.html'" >About Me</button>
+            <button class="navlink" onclick="location.href='blog.html'">Blog</button>
+            <button class="navlink" onclick="location.href='tabledemo.html'">Schedule</button>
+        </section>
         <table class="fade-in-bottom">
             <caption>
-                <strong>Office Hours</strong>
+                <strong>Class Schedule</strong>
             </caption>
             <thead>
                 <tr>
@@ -55,9 +61,34 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">Mon</th>
-                    <td>2-4pm</td>
-                    <td>RB304</td>
+                    <th scope="row">Mon, Wed, Fri</th>
+                    <td>8-9am</td>
+                    <td>RB412</td>
+                </tr>
+                <tr>
+                    <th scope="row">Mon, Fri</th>
+                    <td>9:10-10:10am</td>
+                    <td>RB340</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tue, Thu</th>
+                    <td>8:30-9:30am</td>
+                    <td>RB322</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tue, Thu</th>
+                    <td>11:20am-12:50pm</td>
+                    <td>NB220</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tue</th>
+                    <td>3:40-5:40pm</td>
+                    <td>RB302</td>
+                </tr>
+                <tr>
+                    <th scope="row">Wed</th>
+                    <td>10:20am-12:20pm</td>
+                    <td>RB222</td>
                 </tr>
             </tbody>
         </table>
