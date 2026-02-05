@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>
             Jake's Homepage
@@ -8,9 +10,9 @@
     </head>
     <body>
         <section class="navbar">
-            <p>
-                <link class="navlink" ref="about.html">About Me</link>
-            </p>
+            <button class="navlink" onclick="location.href='about.html'" >About Me</button>
+            <button class="navlink" onclick="location.href='blog.html'">Blog</button>
+            <button class="navlink" onclick="location.href='tabledemo.html'">Schedule</button>
         </section>
         <h1 class="fade-in-bottom">
             Jake Biel
@@ -18,7 +20,7 @@
         <section class="hero-box fade-in-bottom">
             <h2>Welcome to Our App</h2>
             <p>The best way to manage your tasks without the stress.</p>
-            <button>Get Started</button>
+            <button style="padding: 10px;">Get Started</button>
         </section>
 
     </body>
