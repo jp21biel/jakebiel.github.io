@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <style>
+            nav {
+                display: flex;
+                background-color: #333;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo{
+                font-size: 24px;
+                color: white;
+                padding-left: 10px;
+            }
+            a {
+                color: white;
+                font-style:initial;
+                text-decoration: none;
+            }
+            ul {
+                list-style: none;
+            }
+            li {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .nav-links {
+                display: flex;
+                justify-self: flex-end;
+                flex-direction: row;
+            }
+            a:hover {
+                background-color: lightgray;
+            }
+            @media (max-width: 600px) {
+                nav {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                }
+                .nav-links {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                li {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                .logo {
+                    display: flex;
+                    align-self: center;
+                    padding-bottom: 20px;
+                }
+            }
+        </style>
+        <nav class="site-nav">
+            <div class="logo">MySite</div>
+            <ul class="nav-links">
+                <li><a href="myflex.html">Flex</a></li>
+                <li><a href="layout.html">Layout</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+</html>
