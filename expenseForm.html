@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Expenses</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body>
+        <main class="container">
+            <h1>Add Expenses</h1>
+            <form action="" id="expenseForm">
+                <div class="mb-3">
+                    <label for="expensePlace" class="formLabel">Place of Expense:  </label>
+                    <input type="text" id="expensePlace" required minlength="5" class="formControl">
+                </div>
+                <div class="mb-3">
+                    <label for="expenseDate" class="formLabel">Date of Expense:  </label>
+                    <input type="date" id="expenseDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="amount" class="formLabel">Amount:  </label>
+                    <input type="text" id="amount" required class="formControl" min="0" max="50000">
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="formLabel">Category:  </label>
+                    <select name="category" id="category" class="formControl">
+                        <option value="grocery">Grocery</option>
+                        <option value="business">Business</option>
+                        <option value="restaurant">Restaurant</option>
+                        <option value="recreation">Recreation</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script>
+            document.getElementById("expenseForm").addEventListener("submit", function(e){
+                e.preventDefault();
+                const place = document.getElementById("expensePlace").value;
+                const expDate = Date.parse(document.getElementById("expenseDate").value);
+                const amount = document.getElementById("amount").value;
+            });
+        </script>
+    </body>
+</html>
