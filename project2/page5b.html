@@ -32,12 +32,20 @@
                     });
                 }
                 function checkSequence() {
-                    if (JSON.stringify(userSequence) === JSON.stringify(correctSequence)) {
+                    let count = 0;
+                    for(let i = 0; i < userSequence.length; i++){
+                        if(userSequence[i] === correctSequence[i]){
+                            count++;
+                        }else{
+                            alert("Incorrect sequence! Try again.");
+                            reset();
+                            count = 0;
+                            break;
+                        }
+                    }
+                    if(count == 3){
                         alert("Success! You completed the sequence!");
                         window.location.href = "page6.html";
-                    } else {
-                        alert("Incorrect sequence! Try again.");
-                        reset();
                     }
                 }
                 function reset() {
