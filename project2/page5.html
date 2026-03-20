@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Journey Continues</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="container">
+            <h1>The Journey Continues</h1>
+            <p>With the guardian's riddle behind you, the path forward splits into three. Each route is known to favor certain traits: strength, wisdom, or stealth. Choose your path wisely, as it will influence the challenges you face ahead.</p>
+            <form action="page6.html">
+                <label for="pathChoice">Choose your Path:</label>
+                <select id="pathChoice" name="pathChoice" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="stealth">The Path of Stealth</option>
+                    <option value="showdown">The Final Showdown</option>
+                </select>
+                <button onclick="redirect()">Continue on Your Journey</button>
+            </form>
+            <p>Your choice will not only test your abilities but also reveal deeper truths about your character.</p>   
+        </section>
+        <script>
+            const pathChoice = document.getElementById("pathChoice");
+            const form = document.querySelector("form");
+            pathChoice.addEventListener("change", function () {
+                const choice = pathChoice.value;
+                if (choice === "stealth") {
+                    document.body.style.backgroundColor = "blue";
+                } else if (choice === "showdown") {
+                    document.body.style.backgroundColor = "#darkred";
+                } else {
+                    document.body.style.backgroundColor = "gray";
+                }
+            });
+            form.addEventListener("submit", function (event) {
+                const choice = pathChoice.value;
+                if (choice === "stealth") {
+                    event.preventDefault();
+                    window.location.href = "page5b.html";
+                }
+            });
+        </script>
+    </body>
+</html>
